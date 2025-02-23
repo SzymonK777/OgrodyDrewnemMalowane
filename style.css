@@ -184,7 +184,10 @@ html {
     padding: 3px 2px; 
 }
 
+
+
     }
+
 
 
 .full-screen-menu {
@@ -398,6 +401,7 @@ h4{
 .podstopka h3 {
     color: rgb(44, 44, 44);
     text-align: center;
+    font-size: 1rem;
 }
 .stopka-menu {
     float: left;
@@ -592,6 +596,45 @@ img.stopkalogo {
         font-size: 14pt;
         line-height: 2.2;
         text-align: center;
+        
+    }
+    #stopkalaczenie {
+        font-size: 1.1rem;
+    }
+
+    #cooferujemy {
+        font-size: 1.4rem;
+    }
+    #dlaczego {
+        font-size: 1.4rem;
+    } 
+    #odkryj {
+        font-size: 1.1rem;
+    }
+    #jestesmy {
+        font-size: 1.1rem;
+        width: 100%; 
+        text-align: left; 
+        margin-left: 0;
+        padding: 10px 5%;
+    }
+    #ogrody {
+        font-size: 1.1rem;
+    }
+    #altanki {
+        font-size: 1.1rem;
+    }
+    #nasza {
+        font-size: 1.4rem;
+    }
+    #ulepsz {
+        padding-bottom: 20px;
+        font-size: 1.9rem;
+        font-weight: 0;
+        color: rgb(44, 44, 44);
+    }
+    #ogrodjak {
+       font-size: 3.2rem;
     }
 
     .break-line {
@@ -620,12 +663,12 @@ img.stopkalogo {
         text-align: left; 
     }
     img.stopkalogo {
-        width: 60%; 
+        width: 50%; 
         margin-left: 0;
     }
     .stopka h2 {
             text-decoration: none;
-            font-size: 15pt;
+            font-size: 1.1rem;
             padding: 0px;
             padding-top: 20px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -635,6 +678,9 @@ img.stopkalogo {
     .stopka p {
         font-size: 40px; 
     }
+}
+@media screen and (max-width: 480px) {
+
 }
 
 
@@ -667,7 +713,7 @@ img.stopkalogo {
     text-decoration: none;
     color: white;
 }
-    @media (max-width: 768px) {
+@media screen and (max-width: 768px) {
         /* Zmiana pozycjonowania przycisku na telefonie */
         #skontaktujsieznami {
             position: relative; /* Zmieniamy na relative */
@@ -680,7 +726,7 @@ img.stopkalogo {
             white-space: nowrap;
             padding: 0;
             width: 85%;
-            margin-left: 35px;
+            margin-left: 30px;
         }
     
         /* Opcjonalnie, możesz dodać stylizację dla obrazu laptopa */
