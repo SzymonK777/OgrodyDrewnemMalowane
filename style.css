@@ -129,7 +129,7 @@ html {
         margin-top: 20px;
     }
     .description h1{
-        font-size: 33pt;
+        font-size: 22pt;
         width: 100%; 
         text-align: left; 
         margin-left: 0;
@@ -174,7 +174,19 @@ html {
     font-size: 40px;
     text-align: center;
 }
+.description h2 {
+    font-size: 10pt;
+}
+
+#kontaktnapis {
+    color: white;
+    margin: 0;
+    padding: 3px 2px; 
+}
+
     }
+
+
 .full-screen-menu {
     position: fixed;
     top: 0;
@@ -462,7 +474,6 @@ img.stopkalogo {
     background-color: #201e29;
     border: none;
     padding: 15px 32px;
-    font-size: 25px;
     color: white;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -473,8 +484,8 @@ img.stopkalogo {
 #kontaktnapis {
     color: white;
     margin: 0;
-    font-size: 18pt;
-    padding: 3px 2px;
+    font-size: 16pt;
+    padding: 3px 2px; 
 }
 #skontaktujsieznami:hover {
     color: black;
@@ -624,13 +635,14 @@ img.stopkalogo {
     .stopka p {
         font-size: 40px; 
     }
+}
 
 
  /* Przyciski na stronie Kontakt */
 #kontaktnapis {
     color: white;
     margin: 0;
-    font-size: 18pt;
+    font-size: 16pt;
     padding: 3px 2px;
 }
 
@@ -661,10 +673,14 @@ img.stopkalogo {
             position: relative; /* Zmieniamy na relative */
             bottom: auto; /* Usuwamy bottom */
             transform: none; /* Usuwamy transform */
-            margin-top: 20px; /* Dodajemy margines, aby oddzielić od zdjęcia */
+            /* Dodajemy margines, aby oddzielić od zdjęcia */
             left: auto; /* Usuwamy ustawienie left */
             width: 100%; /* Możesz dostosować szerokość przycisku */
             text-align: center; /* Wyrównujemy przycisk na środku */
+            white-space: nowrap;
+            padding: 0;
+            width: 85%;
+            margin-left: 35px;
         }
     
         /* Opcjonalnie, możesz dodać stylizację dla obrazu laptopa */
@@ -673,5 +689,6 @@ img.stopkalogo {
             width: 160%;
             max-width: 768px;
             margin: 0 auto;
+            
         }
     }
