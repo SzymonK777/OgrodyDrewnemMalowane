@@ -1,0 +1,134 @@
+/* Kontaktowy formularz */
+.contact-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff; 
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif; /* Ustawienie czcionki na Roboto */
+}
+
+/* Nowy tytuł formularza */
+.form-title {
+    text-align: center;
+    font-size: 2.5rem;  /* Zwiększenie rozmiaru czcionki tytułu */
+    font-weight: 700;   /* Pogrubienie tytułu */
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Stylizacja tekstu stopki */
+.footer-text {
+    text-align: center;
+    font-size: 1.2rem;  /* Zwiększenie rozmiaru czcionki stopki */
+    color: #666;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+/* Styl formularza */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333; 
+    margin-bottom: 8px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: 2px solid #ccc; 
+    border-radius: 10px;
+    font-size: 1.1rem;  /* Zwiększenie rozmiaru czcionki wewnątrz formularza */
+    color: #333; 
+    background-color: #f4f4f4; 
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #333; 
+    outline: none;
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Styl przycisku wyślij */
+.submit-button {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #555; 
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+/* Responsywność - dla telefonów */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .form-group label {
+        font-size: 1.1rem;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        font-size: 1rem;
+    }
+
+    .submit-button {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
+
+/* Responsywność - dla bardzo małych ekranów */
+@media (max-width: 480px) {
+    .contact-form-container {
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
