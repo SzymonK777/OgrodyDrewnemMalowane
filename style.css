@@ -3,8 +3,9 @@
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
+html, body {
     overflow-x: hidden;
+    width: 100%;
 }
 .mainbox {
     background-color: #f0f0f0;
@@ -18,6 +19,8 @@ body {
     align-items: center;
     background-size: 880px;
     background-position: 75% center;
+    width: 100%; /* Ograniczenie szerokości */
+    box-sizing: border-box; /* Padding wliczony w szerokość */
 }
 .mainbox::before {
     content: '';
@@ -97,15 +100,16 @@ html {
 @media (max-width: 768px) {
     .menu ul {
         display: none;
-        position: absolute;
+        position: fixed; /* Zamiast absolute, aby lepiej kontrolować pozycję */
         top: 60px;
-        right: 5%;
+        left: 0; /* Zaczynamy od lewej krawędzi */
+        width: 100%; /* Pełna szerokość ekranu */
         background-color: #fff;
-        width: 90%;
-        padding: 10px;
+        padding: 10px 0; /* Padding tylko w pionie */
         flex-direction: column;
         box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
         list-style-type: none;
+        z-index: 999; /* Upewniamy się, że jest nad innymi elementami */
     }
     .hamburger {
         display: flex;
@@ -174,15 +178,17 @@ html {
         padding: 60px 0% 30px 0%;
     }
   
-.full-screen-menu nav a {
-    display: block;
-    padding: 10px;
-    margin-bottom: 40px; 
-    text-decoration: none;
-    color: #000;
-    font-size: 40px;
-    text-align: center;
-}
+    .full-screen-menu nav a {
+        display: block;
+        padding: 10px;
+        margin-bottom: 40px;
+        text-decoration: none;
+        color: #000;
+        font-size: 40px;
+        text-align: center;
+        width: 100%; /* Ograniczenie szerokości */
+        box-sizing: border-box; /* Padding wliczony w szerokość */
+    }
 .description h2 {
     font-size: 10pt;
 }
@@ -199,23 +205,24 @@ html {
 
 
 
-.full-screen-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 1000;
-    opacity: 0;
-    transform-origin: top;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: scaleY(0);
-}
+    .full-screen-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; /* Używamy viewport width zamiast procentów */
+        height: 100vh; /* Używamy viewport height */
+        background: #fff;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1000;
+        opacity: 0;
+        transform-origin: top;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: scaleY(0);
+        overflow-x: hidden; /* Zapobiega przesuwaniu w poziomie */
+    }
 .full-screen-menu.active {
     display: flex;
     opacity: 1;
