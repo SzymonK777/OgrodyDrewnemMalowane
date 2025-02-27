@@ -7,14 +7,14 @@
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
-    font-family: 'Roboto', sans-serif; /* Ustawienie czcionki na Roboto */
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Nowy tytuł formularza */
 .form-title {
     text-align: center;
-    font-size: 2.5rem;  /* Zwiększenie rozmiaru czcionki tytułu */
-    font-weight: 700;   /* Pogrubienie tytułu */
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 30px;
     color: #333;
 }
@@ -22,13 +22,13 @@
 /* Stylizacja tekstu stopki */
 .footer-text {
     text-align: center;
-    font-size: 1.2rem;  /* Zwiększenie rozmiaru czcionki stopki */
+    font-size: 1.2rem;
     color: #666;
     margin-top: 20px;
     font-weight: 400;
 }
 
-/* Styl formularza */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -36,6 +36,7 @@
 
 .form-group {
     margin-bottom: 25px;
+    width: 95%;
 }
 
 .form-group label {
@@ -52,7 +53,7 @@
     margin-top: 5px;
     border: 2px solid #ccc; 
     border-radius: 10px;
-    font-size: 1.1rem;  /* Zwiększenie rozmiaru czcionki wewnątrz formularza */
+    font-size: 1.1rem;
     color: #333; 
     background-color: #f4f4f4; 
     transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -68,8 +69,6 @@
     resize: vertical;
     min-height: 150px;
 }
-
-/* Styl przycisku wyślij */
 .submit-button {
     padding: 15px;
     background-color: #333;
@@ -81,22 +80,20 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .submit-button:hover {
     background-color: #555; 
     transform: translateY(-2px);
 }
-
 .submit-button:active {
     transform: translateY(1px);
 }
-
-/* Responsywność - dla telefonów */
 @media (max-width: 768px) {
     .contact-form-container {
         padding: 20px;
+        width: 85%;
+        margin-right: 3%;
     }
-
+    
     .form-group label {
         font-size: 1.1rem;
     }
@@ -110,9 +107,10 @@
         font-size: 1.1rem;
         padding: 12px;
     }
+    .form-group {
+        width: 92%;
+    }
 }
-
-/* Responsywność - dla bardzo małych ekranów */
 @media (max-width: 480px) {
     .contact-form-container {
         padding: 15px;

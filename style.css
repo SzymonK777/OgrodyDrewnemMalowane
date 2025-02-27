@@ -726,6 +726,9 @@ img.stopkalogo {
     text-decoration: none;
     color: white;
 }
+#hrstopka {
+    width: 38%;
+}
 @media screen and (max-width: 768px) {
         /* Zmiana pozycjonowania przycisku na telefonie */
         #skontaktujsieznami {
@@ -754,5 +757,8 @@ img.stopkalogo {
             max-width: 768px;
             margin: 0 auto;
             
+        }
+        #hrstopka {
+            width: 25%;
         }
     }
