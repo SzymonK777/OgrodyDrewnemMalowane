@@ -19,8 +19,8 @@ html, body {
     align-items: center;
     background-size: 880px;
     background-position: 75% center;
-    width: 100%; /* Ograniczenie szerokości */
-    box-sizing: border-box; /* Padding wliczony w szerokość */
+    width: 100%;
+    box-sizing: border-box; 
 }
 .mainbox::before {
     content: '';
@@ -100,16 +100,16 @@ html {
 @media (max-width: 768px) {
     .menu ul {
         display: none;
-        position: fixed; /* Zamiast absolute, aby lepiej kontrolować pozycję */
+        position: fixed;
         top: 60px;
-        left: 0; /* Zaczynamy od lewej krawędzi */
-        width: 100%; /* Pełna szerokość ekranu */
+        left: 0; 
+        width: 100%; 
         background-color: #fff;
-        padding: 10px 0; /* Padding tylko w pionie */
+        padding: 10px 0; 
         flex-direction: column;
         box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
         list-style-type: none;
-        z-index: 999; /* Upewniamy się, że jest nad innymi elementami */
+        z-index: 999;
     }
     .hamburger {
         display: flex;
@@ -186,8 +186,8 @@ html {
         color: #000;
         font-size: 40px;
         text-align: center;
-        width: 100%; /* Ograniczenie szerokości */
-        box-sizing: border-box; /* Padding wliczony w szerokość */
+        width: 100%;
+        box-sizing: border-box; 
     }
 .description h2 {
     font-size: 10pt;
@@ -198,19 +198,28 @@ html {
     margin: 0;
     padding: 3px 2px; 
 }
+.lightbox img {
+    max-width: 95%;
+    max-height: 70%;
+}
 
+.prev, .next {
+    font-size: 30px;
+}
 
+.close {
+    font-size: 30px;
+    top: 10px;
+    right: 15px;
+}
 
     }
-
-
-
     .full-screen-menu {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw; /* Używamy viewport width zamiast procentów */
-        height: 100vh; /* Używamy viewport height */
+        width: 100vw;
+        height: 100vh;
         background: #fff;
         display: none;
         align-items: center;
@@ -221,7 +230,7 @@ html {
         transform-origin: top;
         transition: opacity 0.3s ease, transform 0.3s ease;
         transform: scaleY(0);
-        overflow-x: hidden; /* Zapobiega przesuwaniu w poziomie */
+        overflow-x: hidden;
     }
 .full-screen-menu.active {
     display: flex;
@@ -701,7 +710,7 @@ img.stopkalogo {
     }
 }
 
- /* Przyciski na stronie Kontakt */
+ 
 #kontaktnapis {
     color: white;
     margin: 0;
@@ -714,7 +723,7 @@ img.stopkalogo {
     background-color: #353245;
 }
 
-/* Ustawienia ogólne dla przycisku (komputer, laptop, tablet) */
+
 #skontaktujsieznami {
     background-color: #201e29;
     border: none;
@@ -733,19 +742,15 @@ img.stopkalogo {
     text-decoration: none;
     color: white;
 }
-#hrstopka {
-    width: 38%;
-}
 @media screen and (max-width: 768px) {
-        /* Zmiana pozycjonowania przycisku na telefonie */
+        
         #skontaktujsieznami {
-            position: relative; /* Zmieniamy na relative */
-            bottom: auto; /* Usuwamy bottom */
-            transform: none; /* Usuwamy transform */
-            /* Dodajemy margines, aby oddzielić od zdjęcia */
-            left: auto; /* Usuwamy ustawienie left */
-            width: 100%; /* Możesz dostosować szerokość przycisku */
-            text-align: center; /* Wyrównujemy przycisk na środku */
+            position: relative; 
+            bottom: auto; 
+            transform: none; 
+            left: auto; 
+            width: 100%; 
+            text-align: center; 
             white-space: nowrap;
             padding: 0;
             width: 85%;
@@ -757,7 +762,7 @@ img.stopkalogo {
             font-size: 0.9rem;
           }
     
-        /* Opcjonalnie, możesz dodać stylizację dla obrazu laptopa */
+        
         #laptop {
             display: block;
             width: 160%;
@@ -769,3 +774,58 @@ img.stopkalogo {
             width: 25%;
         }
     }
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 5px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox .close:hover {
+    color: red;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    color: #b4b4b4;
+}

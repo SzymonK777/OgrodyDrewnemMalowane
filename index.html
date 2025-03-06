@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ogrody Drewnem Malowane</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -113,36 +114,43 @@
 </div>
 
 
-    <section id="produkty" class="modernist-section">
-        <div class="container">
-            <div class="grid">
-                <div class="item">
-                    <img src="pergole.jpg" alt="">
-                    <p class="description">Nowoczesna pergola – stylowa ochrona przed słońcem i deszczem. Idealna do ogrodu i na taras.</p>
-                </div>
-                <div class="item">
-                    <img src="doniczka.jpg" alt="">
-                    <p class="description">Drewniane doniczki – naturalne, stylowe i trwałe. Idealne do ogrodu, na balkon i taras.</p>
-                </div>
-                <div class="item">
-                    <img src="drewniane.jpg" alt="">
-                    <p class="description">Naturalne i trwałe drewniane produkty, łączące funkcjonalność z estetyką. Idealne do wnętrz i ogrodu, wprowadzają ciepło i styl.</p>
-                </div>
-                <div class="item">
-                    <img src="zadaszenia.jpg" alt="">
-                    <p class="description">Solidne i estetyczne zadaszenia, chroniące przed słońcem i deszczem. Idealne do ogrodu, tarasu i wejścia do domu.</p>
-                </div>
-                <div class="item">
-                    <img src="altanka.jpg" alt="">
-                    <p class="description">Altanki ogrodowe – stylowe, funkcjonalne i trwałe. Doskonałe miejsce do wypoczynku na świeżym powietrzu.</p>
-                </div>
-                <div class="item">
-                    <img src="infprodukt.jpg" alt="">
-                    <p class="description">"Przedstawione ilustracje produktów mają charakter poglądowy i mogą różnić się od rzeczywistej usługi."</p>
-                </div>
+<section id="produkty" class="modernist-section">
+    <div class="container">
+        <div class="grid">
+            <div class="item">
+                <img src="pergole.jpg" alt="Pergola" onclick="openLightbox(0)">
+                <p class="description">Nowoczesna pergola – stylowa ochrona przed słońcem i deszczem.</p>
+            </div>
+            <div class="item">
+                <img src="doniczka.jpg" alt="Doniczka" onclick="openLightbox(1)">
+                <p class="description">Drewniane doniczki – naturalne, stylowe i trwałe.</p>
+            </div>
+            <div class="item">
+                <img src="drewniane.jpg" alt="Drewniane produkty" onclick="openLightbox(2)">
+                <p class="description">Naturalne i trwałe drewniane produkty, łączące funkcjonalność z estetyką.</p>
+            </div>
+            <div class="item">
+                <img src="zadaszenia.jpg" alt="Zadaszenie" onclick="openLightbox(3)">
+                <p class="description">Solidne i estetyczne zadaszenia, chroniące przed słońcem i deszczem.</p>
+            </div>
+            <div class="item">
+                <img src="altanka.jpg" alt="Altanka" onclick="openLightbox(4)">
+                <p class="description">Altanki ogrodowe – stylowe, funkcjonalne i trwałe.</p>
+            </div>
+            <div class="item">
+                <img src="infprodukt.jpg" alt="Informacja" onclick="openLightbox(5)">
+                <p class="description">Przedstawione ilustracje produktów mają charakter poglądowy.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Zdjęcie">
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
 
     <div class="description"></div>
 <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -153,18 +161,17 @@
             <p id="nawigacja1">Nawigacja</p>
             <a href="#korzysci">
                 <h2 id="stopka">Korzyści</h2>
-            </a><br> <hr id="hrstopka">
+            </a><br>
             <a href="#kontakt">
                 <h2 id="stopka">Kontakt</h2>
             </a><br>
-            <hr id="hrstopka">
             <a href="#produkty">
                 <h2 id="stopka">Produkty</h2>
             </a>
-            <hr id="hrstopka">
             <h2></h2>
         </div>
         <div class="stopka-kontakt">
+            <p id="nawigacja1">Kontakt</p>
             <a href="#korzysci">
                 <h2 class="stopka">📞 Telefon:<br class="break-line"> +48 999 999 999</h2>
             </a>

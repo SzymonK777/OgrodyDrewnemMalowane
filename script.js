@@ -31,23 +31,62 @@ document.addEventListener('click', (e) => {
         });
     });
     document.addEventListener('DOMContentLoaded', function() {
-        // Wybierz sekcję kontaktu i przycisk
+       
         const kontaktSection = document.getElementById('kontakt');
         const button = document.getElementById('skontaktujsieznami');
     
-        // Utwórz Intersection Observer
+
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Jeśli sekcja jest w widoku, pokaż przycisk
+                   
                     button.classList.add('show');
                 } else {
-                    // Jeśli sekcja nie jest w widoku, ukryj przycisk
+                    
                     button.classList.remove('show');
                 }
             });
-        }, { threshold: 0.5 }); // Sekcja musi być w 50% widoczna, by przycisk się pojawił
+        }, { threshold: 0.5 });
     
-        // Obserwuj sekcję kontaktu
         observer.observe(kontaktSection);
     });
+
+
+    let images = [
+        "pergole.jpg",
+        "doniczka.jpg",
+        "drewniane.jpg",
+        "zadaszenia.jpg",
+        "altanka.jpg",
+        "infprodukt.jpg"
+    ];
+    let currentIndex = 0;
+    
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+    
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+    
+    
+    function changeImage(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        if (currentIndex >= images.length) currentIndex = 0;
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+    
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeLightbox();
+        } else if (event.key === "ArrowRight") {
+            changeImage(1);
+        } else if (event.key === "ArrowLeft") {
+            changeImage(-1);
+        }
+    });
+    
