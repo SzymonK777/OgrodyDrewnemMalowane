@@ -90,3 +90,40 @@ document.addEventListener('click', (e) => {
         }
     });
     
+
+
+
+
+   // Przełączanie trybu ciemnego
+const darkModeToggle = document.getElementById('darkModeToggle');
+const darkModeToggleMobile = document.getElementById('darkModeToggleMobile');
+const body = document.body;
+
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
+    darkModeToggleMobile.textContent = isDarkMode ? '☀️' : '🌙';
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+}
+
+// Obsługa kliknięcia na obu przyciskach
+darkModeToggle.addEventListener('click', toggleDarkMode);
+darkModeToggleMobile.addEventListener('click', toggleDarkMode);
+
+// Wczytanie zapisanego trybu
+const savedMode = localStorage.getItem('darkMode');
+if (savedMode === 'enabled') {
+    body.classList.add('dark-mode');
+    darkModeToggle.textContent = '☀️';
+    darkModeToggleMobile.textContent = '☀️';
+} else {
+    darkModeToggle.textContent = '🌙';
+    darkModeToggleMobile.textContent = '🌙';
+}
+
+// Zamykanie menu po kliknięciu w przycisk na telefonie (opcjonalne)
+darkModeToggleMobile.addEventListener('click', () => {
+    document.getElementById('full-screen-menu').classList.remove('active');
+    document.getElementById('hamburger').classList.remove('active');
+});
