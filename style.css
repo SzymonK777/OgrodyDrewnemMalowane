@@ -395,7 +395,7 @@ button p {
   }
   .left {
     float: left;
-    width: 50%; 
+    width: 32%; 
     height: auto;
     background-image: url("laptop.png");
     background-size: cover; 
@@ -768,10 +768,9 @@ img.stopkalogo {
             width: 160%;
             max-width: 768px;
             margin: 0 auto;
-            
         }
-        #hrstopka {
-            width: 25%;
+        #laptop {
+            width: 100%;
         }
     }
 
